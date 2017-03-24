@@ -87,13 +87,16 @@
 
 
 
+<meta name="description" content="#分数的加减剩除 星期五, 24. 三月 2017 05:49下午‘’’import java.util.Scanner;public class PlussSum {    public static void main(String[] args) {        Scanner in = new Scanner(System.in);        while(in.hasNext()){">
 <meta property="og:type" content="article">
-<meta property="og:title" content="myfirst">
-<meta property="og:url" content="http://yoursite.com/2017/03/21/myfirst/index.html">
+<meta property="og:title" content="羁>>><<<绊">
+<meta property="og:url" content="http://yoursite.com/2017/03/24/分数的加减剩除/index.html">
 <meta property="og:site_name" content="羁>>><<<绊">
-<meta property="og:updated_time" content="2017-03-21T05:14:01.385Z">
+<meta property="og:description" content="#分数的加减剩除 星期五, 24. 三月 2017 05:49下午‘’’import java.util.Scanner;public class PlussSum {    public static void main(String[] args) {        Scanner in = new Scanner(System.in);        while(in.hasNext()){">
+<meta property="og:updated_time" content="2017-03-24T09:50:45.118Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="myfirst">
+<meta name="twitter:title" content="羁>>><<<绊">
+<meta name="twitter:description" content="#分数的加减剩除 星期五, 24. 三月 2017 05:49下午‘’’import java.util.Scanner;public class PlussSum {    public static void main(String[] args) {        Scanner in = new Scanner(System.in);        while(in.hasNext()){">
 
 
 
@@ -121,13 +124,13 @@
 
 
 
-  <link rel="canonical" href="http://yoursite.com/2017/03/21/myfirst/"/>
+  <link rel="canonical" href="http://yoursite.com/2017/03/24/分数的加减剩除/"/>
 
 
 
 
 
-  <title> myfirst | 羁>>><<<绊 </title>
+  <title>  | 羁>>><<<绊 </title>
 </head>
 
 <body itemscope itemtype="http://schema.org/WebPage" lang="">
@@ -246,7 +249,7 @@
   
 
   <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2017/03/21/myfirst/">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2017/03/24/分数的加减剩除/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="Marsling">
@@ -267,7 +270,7 @@
             
             
               
-                myfirst
+                
               
             
           </h1>
@@ -282,8 +285,8 @@
               
                 <span class="post-meta-item-text">Veröffentlicht am</span>
               
-              <time title="Post created" itemprop="dateCreated datePublished" datetime="2017-03-21T13:14:01+08:00">
-                2017-03-21
+              <time title="Post created" itemprop="dateCreated datePublished" datetime="2017-03-24T17:50:45+08:00">
+                2017-03-24
               </time>
             
 
@@ -318,7 +321,94 @@
       
 
       
-        
+        <p>#分数的加减剩除<br> 星期五, 24. 三月 2017 05:49下午<br>‘’’<br>import java.util.Scanner;<br>public class PlussSum {<br>    public static void main(String[] args) {<br>        Scanner in = new Scanner(System.in);<br>        while(in.hasNext()){<br>            String string = in.next();<br>            String[] strings1 = string.split(“[0-9]{1,}”);<br>            String fuhao = strings1[2];<br>            char[] chr = fuhao.toCharArray();//获取运算符,并转化为char类型；<br>            String[] strings = string.split(“[^0-9]”);//获取4个数字</p>
+<pre><code>            int a = new Integer(strings[0]);
+            int b = new Integer(strings[1]);
+            int c = new Integer(strings[2]);
+            int d = new Integer(strings[3]);
+            //System.out.println(a +&quot;,&quot; + b +&quot;,&quot; + c+&quot;,&quot; + d);
+        switch(chr[0]){
+        case &apos;+&apos; :{
+            //System.out.println(&apos;+&apos;);
+            int ab =(a*d +c*b);
+            int cd = b*d;
+            //System.out.println(ab+&quot;,&quot; +cd);
+            int i = run(ab, cd);
+            if(ab/i == cd/i){
+                System.out.println(&quot;1&quot;);
+            }else{
+            System.out.println(ab/i+ &quot;/&quot; +cd/i);
+            }
+        }
+        break;
+        case &apos;-&apos;:{
+            //System.out.println(&apos;-&apos;);
+            int ab =(a*d -c*b);
+
+            int cd = b*d;
+            int i = run(ab, cd);
+            if(ab/i == cd/i){
+                System.out.println(&quot;1&quot;);
+            }else if(ab == 0){
+                System.out.println(&quot;0&quot;);}
+            else{
+            System.out.println(ab/i+ &quot;/&quot; +cd/i);
+            }
+        }
+        break;
+        case &apos;*&apos;:{
+        //    System.out.println(&apos;*&apos;);
+            int ab =(a*c);
+            int cd = b*d;
+            int i = run(ab, cd);
+            if(ab/i == cd/i){
+                System.out.println(&quot;1&quot;);
+            }else{
+            System.out.println(ab/i+ &quot;/&quot; +cd/i);
+            }
+        }
+        break;
+        /*case &apos;\\&apos;:{
+            //System.out.println(&apos;/&apos;);
+            int ab =(a*d);
+            int cd = b*c;
+            int i = run(ab, cd);
+            if(ab/i == cd/i){
+                System.out.println(&quot;1&quot;);
+            }else{
+            System.out.println(ab/i+ &quot;/&quot; +cd/i);
+            }
+        }
+        break;
+        */
+        default:{
+            //System.out.println(&apos;/&apos;);
+            int ab =(a*d);
+            int cd = b*c;
+            int i = run(ab, cd);
+            if(ab/i == cd/i){
+                System.out.println(&quot;1&quot;);
+            }else{
+            System.out.println(ab/i+ &quot;/&quot; +cd/i);
+            }
+        }
+
+        }
+
+        }
+}
+public static int run(int i,int j){
+    while(j !=0){
+        int temp = j;
+        j = i % j;
+        i = temp;
+        //System.out.println(i +&quot;,&quot; +j);
+    }
+    //System.out.println(i);
+    return Math.abs(i);
+}
+</code></pre><p>}<br>‘’’</p>
+
       
     </div>
 
@@ -354,8 +444,8 @@
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
-              <a href="/2017/03/21/hello-world/" rel="next" title="Hello World">
-                <i class="fa fa-chevron-left"></i> Hello World
+              <a href="/2017/03/22/反射机制初体验/" rel="next" title="">
+                <i class="fa fa-chevron-left"></i> 
               </a>
             
           </div>
@@ -363,10 +453,6 @@
           <span class="post-nav-divider"></span>
 
           <div class="post-nav-prev post-nav-item">
-            
-              <a href="/2017/03/21/ubuntu上hexo的配置/" rel="prev" title="“ubuntu上hexo的配置”">
-                “ubuntu上hexo的配置” <i class="fa fa-chevron-right"></i>
-              </a>
             
           </div>
         </div>
@@ -429,7 +515,7 @@
           
             <div class="site-state-item site-state-posts">
               <a href="/archives">
-                <span class="site-state-item-count">4</span>
+                <span class="site-state-item-count">3</span>
                 <span class="site-state-item-name">Artikel</span>
               </a>
             </div>
